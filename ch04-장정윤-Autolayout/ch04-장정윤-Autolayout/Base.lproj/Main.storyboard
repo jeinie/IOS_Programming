@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6gk-qr-QhC">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Conversion View Controller-->
+        <scene sceneID="TCX-WD-g32">
+            <objects>
+                <viewController storyboardIdentifier="ConversionViewController" id="6gk-qr-QhC" customClass="장정윤ConversionViewController" customModule="ch04___________Autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zUI-nu-SKi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hty-L7-BHe">
+                                <rect key="frame" x="0.0" y="44" width="400" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taA-9C-yp8">
+                                        <rect key="frame" x="186" y="178.66666666666666" width="28" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9z-Bx-52G">
+                                        <rect key="frame" x="38.666666666666657" y="127.66666666666666" width="323" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xrM-6k-FTw">
+                                        <rect key="frame" x="111" y="34.000000000000007" width="178" height="85.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="fahrenheitEditingChange:" destination="6gk-qr-QhC" eventType="editingChanged" id="5YX-mM-EaO"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D41-ZD-O4L">
+                                        <rect key="frame" x="143.66666666666666" y="229.66666666666669" width="112.99999999999997" height="84"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPz-fh-wt7">
+                                        <rect key="frame" x="66" y="321.66666666666669" width="268" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="3RA-Bf-jux"/>
+                                    <constraint firstItem="D41-ZD-O4L" firstAttribute="top" secondItem="taA-9C-yp8" secondAttribute="bottom" constant="8" id="8qx-Bu-P4D"/>
+                                    <constraint firstItem="cPz-fh-wt7" firstAttribute="top" secondItem="D41-ZD-O4L" secondAttribute="bottom" constant="8" id="9pP-bC-9ir"/>
+                                    <constraint firstItem="taA-9C-yp8" firstAttribute="top" secondItem="n9z-Bx-52G" secondAttribute="bottom" constant="8" id="TbV-hK-blr"/>
+                                    <constraint firstAttribute="width" constant="400" id="Tn2-vq-xbW"/>
+                                    <constraint firstItem="n9z-Bx-52G" firstAttribute="top" secondItem="xrM-6k-FTw" secondAttribute="bottom" constant="8" id="boT-12-HfT"/>
+                                    <constraint firstItem="xrM-6k-FTw" firstAttribute="centerX" secondItem="hty-L7-BHe" secondAttribute="centerX" id="fOX-eD-TsL"/>
+                                    <constraint firstItem="taA-9C-yp8" firstAttribute="centerX" secondItem="hty-L7-BHe" secondAttribute="centerX" id="jVC-1a-Li4"/>
+                                    <constraint firstItem="n9z-Bx-52G" firstAttribute="centerX" secondItem="hty-L7-BHe" secondAttribute="centerX" id="rvm-GN-xuO"/>
+                                    <constraint firstItem="D41-ZD-O4L" firstAttribute="centerX" secondItem="hty-L7-BHe" secondAttribute="centerX" id="sj7-24-3l6"/>
+                                    <constraint firstItem="cPz-fh-wt7" firstAttribute="centerX" secondItem="hty-L7-BHe" secondAttribute="centerX" id="vCb-2c-9TR"/>
+                                    <constraint firstItem="taA-9C-yp8" firstAttribute="centerY" secondItem="hty-L7-BHe" secondAttribute="centerY" id="vdq-8W-x0v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8i1-YA-Ucj"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="hty-L7-BHe" firstAttribute="top" secondItem="8i1-YA-Ucj" secondAttribute="top" id="5yy-ns-Lhd"/>
+                            <constraint firstItem="hty-L7-BHe" firstAttribute="leading" secondItem="8i1-YA-Ucj" secondAttribute="leading" id="7H7-WS-Kzi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="D41-ZD-O4L" id="Qji-dE-UVj"/>
+                        <outlet property="fahrenheitTextField" destination="xrM-6k-FTw" id="t8i-BJ-snA"/>
+                        <outlet property="view" destination="D41-ZD-O4L" id="0K5-wf-w4e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eag-Wh-wdn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="-108"/>
+        </scene>
+        <!--Conversion View Controller-->
+        <scene sceneID="jZ4-64-MgB">
+            <objects>
+                <viewController id="eOc-Ac-cOk" customClass="장정윤ConversionViewController" customModule="ch04___________Autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fi-RG-vwG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-4y-Ilr">
+                                <rect key="frame" x="7" y="248" width="400" height="400"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Celsius" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqz-21-W1U">
+                                        <rect key="frame" x="66" y="321.66666666666663" width="268" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV6-nf-gv3">
+                                        <rect key="frame" x="186" y="178.66666666666669" width="28" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="degrees Fahrenheit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fT-fh-fhL">
+                                        <rect key="frame" x="38.666666666666657" y="127.66666666666669" width="323" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.88235294119999996" green="0.34509803919999998" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjP-mS-3NF">
+                                        <rect key="frame" x="143.66666666666666" y="229.66666666666669" width="112.66666666666666" height="84"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M79-kw-vIf">
+                                        <rect key="frame" x="111" y="34.333333333333307" width="178" height="85.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="fahrenheitEditingChange:" destination="eOc-Ac-cOk" eventType="editingChanged" id="S0P-2r-Koc"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstItem="Aqz-21-W1U" firstAttribute="top" secondItem="JjP-mS-3NF" secondAttribute="bottom" constant="8" id="1mZ-lg-Hoe"/>
+                                    <constraint firstItem="PV6-nf-gv3" firstAttribute="centerY" secondItem="JhE-4y-Ilr" secondAttribute="centerY" id="70L-r0-MnH"/>
+                                    <constraint firstAttribute="height" constant="400" id="AmA-l1-zDp"/>
+                                    <constraint firstItem="JjP-mS-3NF" firstAttribute="top" secondItem="PV6-nf-gv3" secondAttribute="bottom" constant="8" id="GdI-QK-iyQ"/>
+                                    <constraint firstItem="PV6-nf-gv3" firstAttribute="centerX" secondItem="JhE-4y-Ilr" secondAttribute="centerX" id="JPB-do-ekf"/>
+                                    <constraint firstAttribute="width" constant="400" id="LpR-bH-dMU"/>
+                                    <constraint firstItem="M79-kw-vIf" firstAttribute="centerX" secondItem="JhE-4y-Ilr" secondAttribute="centerX" id="Nid-6B-jVg"/>
+                                    <constraint firstItem="PV6-nf-gv3" firstAttribute="top" secondItem="5fT-fh-fhL" secondAttribute="bottom" constant="8" id="Pgq-fC-c36"/>
+                                    <constraint firstItem="JjP-mS-3NF" firstAttribute="centerX" secondItem="JhE-4y-Ilr" secondAttribute="centerX" id="R73-OB-I71"/>
+                                    <constraint firstItem="Aqz-21-W1U" firstAttribute="centerX" secondItem="JhE-4y-Ilr" secondAttribute="centerX" id="VMe-N9-XjE"/>
+                                    <constraint firstItem="5fT-fh-fhL" firstAttribute="centerX" secondItem="JhE-4y-Ilr" secondAttribute="centerX" id="aEd-pU-3EN"/>
+                                    <constraint firstItem="5fT-fh-fhL" firstAttribute="top" secondItem="M79-kw-vIf" secondAttribute="bottom" constant="8" id="gu0-6u-jFC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cQs-5W-OIy"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JhE-4y-Ilr" firstAttribute="centerX" secondItem="4fi-RG-vwG" secondAttribute="centerX" id="6Lb-Am-sng"/>
+                            <constraint firstItem="JhE-4y-Ilr" firstAttribute="centerY" secondItem="4fi-RG-vwG" secondAttribute="centerY" id="Hqq-8p-aDg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="JjP-mS-3NF" id="GQu-bj-QTm"/>
+                        <outlet property="fahrenheitTextField" destination="M79-kw-vIf" id="NLx-MF-w8I"/>
+                        <outlet property="view" destination="JjP-mS-3NF" id="yI8-gw-L1H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPC-hp-Ywa" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="-117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
