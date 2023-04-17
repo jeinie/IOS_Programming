@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="-860" y="208"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="LJz-BA-Ija">
             <objects>
                 <viewController id="x5g-zQ-aaS" customClass="MapViewController" customModule="ch06___________tabBarController" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             <constraint firstAttribute="trailing" secondItem="WNJ-o8-KtJ" secondAttribute="trailing" id="tda-5W-EcM"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="map.fill" catalog="system" id="LMk-3I-uZU"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="LMk-3I-uZU" userLabel="Map"/>
                     <connections>
                         <outlet property="mapView" destination="WNJ-o8-KtJ" id="EuI-ce-iph"/>
                     </connections>

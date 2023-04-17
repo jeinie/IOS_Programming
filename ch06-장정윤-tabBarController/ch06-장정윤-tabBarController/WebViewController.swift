@@ -35,10 +35,12 @@ class WebViewController: UIViewController, WKNavigationDelegate {
             city = ""
         }
         
-        let urlStr = "https://en.wikipedia.org/wiki/" + city
+        var urlStr = "https://en.wikipedia.org/wiki/" + city
+        urlStr = urlStr.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! // New York 의 경우 스페이스를 url 에 맞도록 인코딩
         
         // URL 객체 생성
         let myUrl = URL(string: urlStr)
+        
         // URL Request 객체 생성
         let request = URLRequest(url: myUrl!)
         //
