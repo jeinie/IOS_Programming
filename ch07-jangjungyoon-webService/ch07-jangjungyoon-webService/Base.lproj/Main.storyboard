@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nyU-kX-dqE">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CityViewController" customModule="ch07_jangjungyoon_webService" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xX-tO-HUm">
+                                <rect key="frame" x="36.666666666666657" y="318" width="320" height="216"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpv-ow-1aY">
+                                <rect key="frame" x="100" y="267" width="193" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7TB-ZA-B9n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7TB-ZA-B9n" firstAttribute="trailing" secondItem="zpv-ow-1aY" secondAttribute="trailing" constant="100" id="4bX-r1-xLs"/>
+                            <constraint firstItem="2xX-tO-HUm" firstAttribute="centerX" secondItem="7TB-ZA-B9n" secondAttribute="centerX" id="Qdv-nv-cS2"/>
+                            <constraint firstItem="2xX-tO-HUm" firstAttribute="top" secondItem="zpv-ow-1aY" secondAttribute="bottom" constant="30" id="T0P-Uf-YMA"/>
+                            <constraint firstItem="zpv-ow-1aY" firstAttribute="leading" secondItem="7TB-ZA-B9n" secondAttribute="leading" constant="100" id="dD9-kw-qSh"/>
+                            <constraint firstItem="2xX-tO-HUm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gQ9-Ft-foc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="City" image="CityIcon" id="Un3-i2-9V6"/>
+                    <connections>
+                        <outlet property="cityPickerView" destination="2xX-tO-HUm" id="uA7-bG-3NS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-860" y="208"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="LJz-BA-Ija">
+            <objects>
+                <viewController id="x5g-zQ-aaS" customClass="MapViewController" customModule="ch07_jangjungyoon_webService" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="x53-gB-ObB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNJ-o8-KtJ" customClass="MapViewController">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Be0-d7-lqP">
+                                <rect key="frame" x="8" y="67" width="377" height="32"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                                <connections>
+                                    <action selector="sgcValueChanged:" destination="x5g-zQ-aaS" eventType="valueChanged" id="PI2-zS-SXI"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oZc-23-IWC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Be0-d7-lqP" firstAttribute="leading" secondItem="oZc-23-IWC" secondAttribute="leading" constant="8" id="GYy-2p-gUg"/>
+                            <constraint firstAttribute="bottom" secondItem="WNJ-o8-KtJ" secondAttribute="bottom" id="LHH-kO-Wdx"/>
+                            <constraint firstItem="WNJ-o8-KtJ" firstAttribute="leading" secondItem="x53-gB-ObB" secondAttribute="leading" id="gGw-KB-iDP"/>
+                            <constraint firstItem="oZc-23-IWC" firstAttribute="trailing" secondItem="Be0-d7-lqP" secondAttribute="trailing" constant="8" id="izd-EB-riU"/>
+                            <constraint firstItem="Be0-d7-lqP" firstAttribute="top" secondItem="oZc-23-IWC" secondAttribute="top" constant="8" id="nCL-99-b43"/>
+                            <constraint firstItem="WNJ-o8-KtJ" firstAttribute="top" secondItem="x53-gB-ObB" secondAttribute="top" id="rcT-8f-r7G"/>
+                            <constraint firstAttribute="trailing" secondItem="WNJ-o8-KtJ" secondAttribute="trailing" id="tda-5W-EcM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map.fill" catalog="system" id="LMk-3I-uZU" userLabel="Map"/>
+                    <connections>
+                        <outlet property="mapView" destination="WNJ-o8-KtJ" id="EuI-ce-iph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WE6-YC-48Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="208"/>
+        </scene>
+        <!--OpenAI-->
+        <scene sceneID="SVl-dB-DaI">
+            <objects>
+                <viewController id="ll3-ek-XS1" customClass="ChatViewController" customModule="ch07_jangjungyoon_webService" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xQ7-Rp-3mC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input a query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBJ-H0-DIP">
+                                <rect key="frame" x="20" y="79" width="262" height="35"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Udj-dw-9rS">
+                                <rect key="frame" x="20" y="134" width="353" height="615"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-ff-ahn">
+                                <rect key="frame" x="302" y="79" width="71" height="35"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Query">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="queryBtn:" destination="ll3-ek-XS1" eventType="touchUpInside" id="iI9-a9-jG6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="htX-ct-c4Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sfp-ff-ahn" firstAttribute="leading" secondItem="jBJ-H0-DIP" secondAttribute="trailing" constant="20" id="7zC-4b-Gvi"/>
+                            <constraint firstItem="jBJ-H0-DIP" firstAttribute="leading" secondItem="htX-ct-c4Z" secondAttribute="leading" constant="20" id="L4u-a7-Coi"/>
+                            <constraint firstItem="Udj-dw-9rS" firstAttribute="leading" secondItem="htX-ct-c4Z" secondAttribute="leading" constant="20" id="NUw-c9-Y9x"/>
+                            <constraint firstItem="htX-ct-c4Z" firstAttribute="bottom" secondItem="Udj-dw-9rS" secondAttribute="bottom" constant="20" id="Vzw-BR-Psm"/>
+                            <constraint firstItem="Udj-dw-9rS" firstAttribute="top" secondItem="Sfp-ff-ahn" secondAttribute="bottom" constant="20" id="YS0-wx-Okt"/>
+                            <constraint firstItem="jBJ-H0-DIP" firstAttribute="top" secondItem="htX-ct-c4Z" secondAttribute="top" constant="20" id="ZF3-fe-cdg"/>
+                            <constraint firstItem="htX-ct-c4Z" firstAttribute="trailing" secondItem="Udj-dw-9rS" secondAttribute="trailing" constant="20" id="cpt-3a-JV9"/>
+                            <constraint firstItem="htX-ct-c4Z" firstAttribute="trailing" secondItem="Sfp-ff-ahn" secondAttribute="trailing" constant="20" id="dJC-qW-JnX"/>
+                            <constraint firstItem="Sfp-ff-ahn" firstAttribute="top" secondItem="htX-ct-c4Z" secondAttribute="top" constant="20" id="djp-GR-BGj"/>
+                            <constraint firstItem="Udj-dw-9rS" firstAttribute="top" secondItem="jBJ-H0-DIP" secondAttribute="bottom" constant="20" id="j0H-Ic-0y4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="OpenAI" image="webIcon" id="cO8-dL-xuB"/>
+                    <connections>
+                        <outlet property="chatView" destination="Udj-dw-9rS" id="lhL-Pl-bax"/>
+                        <outlet property="input" destination="jBJ-H0-DIP" id="O8H-I1-js4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsd-1g-X2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1148.854961832061" y="207.74647887323945"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="H3B-PM-xsY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nyU-kX-dqE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d5r-US-tfe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BlO-zd-JTT"/>
+                        <segue destination="x5g-zQ-aaS" kind="relationship" relationship="viewControllers" id="HaV-dH-XLo"/>
+                        <segue destination="ll3-ek-XS1" kind="relationship" relationship="viewControllers" id="jTz-wE-HP8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AvW-rC-bVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143" y="-616"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CityIcon" width="25" height="25"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
+        <image name="webIcon" width="40" height="40"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_ch07_jangjungyoon_webService {
+  umbrella header "Pods-ch07-jangjungyoon-webService-umbrella.h"
+
+  export *
+  module * { export * }
+}
