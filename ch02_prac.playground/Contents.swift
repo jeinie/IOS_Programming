@@ -39,10 +39,11 @@ var optionalString: String? = "Hello" // 옵셔널 변수
 optionalString == nil // false
 
 var optionalName:String? = nil // optional 변수
+//var optionalName:String? = "John"
 var greeting = "Hello!" // non-optional 변수
 
 // 실습: optionalName 에 할당된 값이 nil 일 때 다른 값을 greeting 에 할당하도록 else 절을 추가하라.
-if let name = optionalName {
+if let name = optionalName { // 옵셔널 바인딩: 옵셔널 변수에 nil 이 들어가 있지 않으면 그 값을 추출해 변수에 저장
     greeting = "Hello, \(name)"
 } else {
     greeting = "Hi"
@@ -74,3 +75,106 @@ case let x where x.hasSuffix("pepper"):
 default:
     let vegetableComment = "Everything tastes good in soup"
 }
+
+
+// for-in
+// 실습: 어떤 숫자가 가장 큰 수로 저장되는지 확인하기 위해 다른 변수를 추가하고, 가장 큰 수로 저장된 타입이 무엇인지 확인
+let interestingNumbers = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25, 36]
+]
+var largest = 0
+var largestKey = ""
+for (kind, numbers) in interestingNumbers {
+    for number in numbers {
+        if number > largest {
+            largest = number
+            largestKey = kind
+        }
+    }
+}
+largest
+largestKey
+
+// 배열 인자
+func sumOf(numbers: Int...) -> Double {
+    var sum = 0
+    for number in numbers {
+        sum += number
+    }
+    return Double(sum/numbers.count)
+}
+sumOf(numbers: 42, 597, 12)
+
+// 중첩 함수
+func returnFifteen() -> Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+
+// 함수: 최상위 타입 / 함수도 매개변수로 받을 수 있음
+func hasAnyMatchers(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+var numbers = [20, 19, 7, 12]
+hasAnyMatchers(list: numbers, condition: lessThanTen(number:))
+
+// 클로저: 이름 없는 함수
+// 실습: 모든 홀수 값에 대해 0을 반환
+let numberList = [10, 21, 30]
+let y = numberList.map(
+    {
+        (number) in // in 키워드 사용해서 인자와 반환값 타입 분리
+        var result = 0
+        if number % 2 != 0 {
+            result = 0
+        } else {
+            result = 3 * number
+        }
+        return result
+    }
+)
+y
+
+var sum = 0
+for x in 1...100 {
+    sum += x
+}
+sum
+
+var list = [Int]()
+var min = 0
+var max = 0
+for _ in 1...100 {
+    list.append(Int.random(in: 1...1000))
+    list.sort()
+    min = list[0]
+    max = list[list.count-1]
+}
+print("min: \(min), max: \(max)")
+
+var arr = [Int]()
+for _ in 1...100 {
+    arr.append(Int.random(in: 1...1000))
+}
+arr
+// 정렬 (후행 클로저)
+arr.sort {
+    (a, b) in a < b
+}
+arr
