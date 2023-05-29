@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1243E7C82A137DD7005AEF8B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1243E7C72A137DD7005AEF8B /* SecondViewController.swift */; };
 		128AC0962A13793C0051148C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0952A13793C0051148C /* AppDelegate.swift */; };
 		128AC0982A13793C0051148C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0972A13793C0051148C /* SceneDelegate.swift */; };
 		128AC09A2A13793C0051148C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0992A13793C0051148C /* ViewController.swift */; };
 		128AC09D2A13793C0051148C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128AC09B2A13793C0051148C /* Main.storyboard */; };
 		128AC09F2A13793D0051148C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 128AC09E2A13793D0051148C /* Assets.xcassets */; };
 		128AC0A22A13793D0051148C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 128AC0A02A13793D0051148C /* LaunchScreen.storyboard */; };
-		128AC0AD2A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0AC2A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerTests.swift */; };
-		128AC0B72A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0B62A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITests.swift */; };
-		128AC0B92A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0B82A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITestsLaunchTests.swift */; };
+		128AC0C62A1379970051148C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AC0C52A1379970051148C /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1243E7C72A137DD7005AEF8B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		128AC0922A13793C0051148C /* ch11-jangjungyoon-homework-NavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ch11-jangjungyoon-homework-NavigationController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		128AC0952A13793C0051148C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		128AC0972A13793C0051148C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +45,8 @@
 		128AC0A12A13793D0051148C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		128AC0A32A13793D0051148C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		128AC0A82A13793D0051148C /* ch11-jangjungyoon-homework-NavigationControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ch11-jangjungyoon-homework-NavigationControllerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		128AC0AC2A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ch11_jangjungyoon_homework_NavigationControllerTests.swift; sourceTree = "<group>"; };
 		128AC0B22A13793D0051148C /* ch11-jangjungyoon-homework-NavigationControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ch11-jangjungyoon-homework-NavigationControllerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		128AC0B62A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ch11_jangjungyoon_homework_NavigationControllerUITests.swift; sourceTree = "<group>"; };
-		128AC0B82A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ch11_jangjungyoon_homework_NavigationControllerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		128AC0C52A1379970051148C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				128AC0942A13793C0051148C /* ch11-jangjungyoon-homework-NavigationController */,
-				128AC0AB2A13793D0051148C /* ch11-jangjungyoon-homework-NavigationControllerTests */,
-				128AC0B52A13793D0051148C /* ch11-jangjungyoon-homework-NavigationControllerUITests */,
 				128AC0932A13793C0051148C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,25 +102,10 @@
 				128AC09E2A13793D0051148C /* Assets.xcassets */,
 				128AC0A02A13793D0051148C /* LaunchScreen.storyboard */,
 				128AC0A32A13793D0051148C /* Info.plist */,
+				128AC0C52A1379970051148C /* FirstViewController.swift */,
+				1243E7C72A137DD7005AEF8B /* SecondViewController.swift */,
 			);
 			path = "ch11-jangjungyoon-homework-NavigationController";
-			sourceTree = "<group>";
-		};
-		128AC0AB2A13793D0051148C /* ch11-jangjungyoon-homework-NavigationControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				128AC0AC2A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerTests.swift */,
-			);
-			path = "ch11-jangjungyoon-homework-NavigationControllerTests";
-			sourceTree = "<group>";
-		};
-		128AC0B52A13793D0051148C /* ch11-jangjungyoon-homework-NavigationControllerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				128AC0B62A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITests.swift */,
-				128AC0B82A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITestsLaunchTests.swift */,
-			);
-			path = "ch11-jangjungyoon-homework-NavigationControllerUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +242,8 @@
 				128AC09A2A13793C0051148C /* ViewController.swift in Sources */,
 				128AC0962A13793C0051148C /* AppDelegate.swift in Sources */,
 				128AC0982A13793C0051148C /* SceneDelegate.swift in Sources */,
+				1243E7C82A137DD7005AEF8B /* SecondViewController.swift in Sources */,
+				128AC0C62A1379970051148C /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128AC0AD2A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +258,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				128AC0B92A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITestsLaunchTests.swift in Sources */,
-				128AC0B72A13793D0051148C /* ch11_jangjungyoon_homework_NavigationControllerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

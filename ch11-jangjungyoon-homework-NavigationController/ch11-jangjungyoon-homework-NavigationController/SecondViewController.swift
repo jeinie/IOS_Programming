@@ -9,21 +9,24 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    var textValue: String?
+    weak var delegate: SecondViewControllerDelegate?
+    
+    @IBOutlet weak var secondTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        secondTextField.text = textValue
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("창 닫힘")
+        
+        delegate?.updateTextField(secondTextField.text)
+        print(">> dismiss")
+        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }
